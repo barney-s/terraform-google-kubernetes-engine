@@ -20,7 +20,7 @@
   Delete default kube-dns configmap
  *****************************************/
 module "gcloud_delete_default_kube_dns_configmap" {
-  source = "github.com/terraform-google-modules/terraform-google-gcloud//modules/kubectl-wrapper?ref=data-lazy-eval"
+  source  = "github.com/terraform-google-modules/terraform-google-gcloud//modules/kubectl-wrapper?ref=data-lazy-eval"
   # version = "~> 2.0.1"
   enabled          = (local.custom_kube_dns_config || local.upstream_nameservers_config) && ! var.skip_provisioners
   cluster_name     = google_container_cluster.primary.name
