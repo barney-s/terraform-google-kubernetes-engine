@@ -38,8 +38,8 @@ resource "google_service_account_key" "gke_hub_key" {
 }
 
 module "gke_hub_registration" {
-  source  = "terraform-google-modules/gcloud/google"
-  version = "~> 2.0.1"
+  source = "github.com/terraform-google-modules/terraform-google-gcloud?ref=data-lazy-eval"
+  # version = "~> 2.0.1"
 
   platform                          = "linux"
   gcloud_sdk_version                = var.gcloud_sdk_version

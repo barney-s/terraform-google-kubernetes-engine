@@ -15,8 +15,8 @@
  */
 
 module "asm_install" {
-  source            = "terraform-google-modules/gcloud/google//modules/kubectl-wrapper"
-  version           = "~> 2.0.1"
+  source = "github.com/terraform-google-modules/terraform-google-gcloud//modules/kubectl-wrapper?ref=data-lazy-eval"
+  # version = "~> 2.0.1"
   module_depends_on = [var.cluster_endpoint]
 
   gcloud_sdk_version    = var.gcloud_sdk_version

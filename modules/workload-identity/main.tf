@@ -44,8 +44,8 @@ resource "kubernetes_service_account" "main" {
 }
 
 module "annotate-sa" {
-  source  = "terraform-google-modules/gcloud/google//modules/kubectl-wrapper"
-  version = "~> 2.0.1"
+  source = "github.com/terraform-google-modules/terraform-google-gcloud//modules/kubectl-wrapper?ref=data-lazy-eval"
+  # version = "~> 2.0.1"
 
   enabled          = var.use_existing_k8s_sa
   skip_download    = true

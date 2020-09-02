@@ -336,8 +336,8 @@ resource "google_container_node_pool" "pools" {
 }
 
 module "gcloud_wait_for_cluster" {
-  source  = "terraform-google-modules/gcloud/google"
-  version = "~> 2.0.1"
+  source = "github.com/terraform-google-modules/terraform-google-gcloud?ref=data-lazy-eval"
+  # version = "~> 2.0.1"
   enabled = var.skip_provisioners
 
   upgrade       = var.gcloud_upgrade
