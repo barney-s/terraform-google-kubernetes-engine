@@ -1,0 +1,15 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: anthos-base
+upstream:
+  type: git
+  git:
+    commit: dd8adeb5483fc1s455fssfrh5211kjkjgvck9377
+    directory: package
+    ref: refs/heads/owners-update
+    repo: https://github.com/anthos/catalog/base
+packageMetadata:
+  shortDescription: "Package to setup anthos base on GKE"
+  email: support@anthos.com
+  version: v0.1.0
