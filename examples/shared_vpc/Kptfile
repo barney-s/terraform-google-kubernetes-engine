@@ -1,7 +1,7 @@
 apiVersion: kpt.dev/v1alpha1
 kind: Kptfile
 metadata:
-  name: anthos-base
+  name: gke-shared-vpc
 upstream:
   type: git
   git:
@@ -10,6 +10,6 @@ upstream:
     ref: refs/heads/owners-update
     repo: https://github.com/anthos/catalog/base
 packageMetadata:
-  shortDescription: "Package to setup anthos base on GKE"
-  email: support@anthos.com
+  shortDescription: "GKE using a shared VPC for host network"
+  email: foundation@cloud.google.com
   version: v0.1.0
