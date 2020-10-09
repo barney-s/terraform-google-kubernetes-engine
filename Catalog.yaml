@@ -1,0 +1,6 @@
+apiVersion: catalog.cnrm.cloud.google.com/v1beta1
+kind: Catalog
+metadata:
+  name: anthos-catalog
+displayName: anthos catalog
+description: Catalog for anthos soln
