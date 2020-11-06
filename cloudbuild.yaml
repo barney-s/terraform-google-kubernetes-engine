@@ -1,2 +1,5 @@
 steps:
 - name: 'gcr.io/barni-cpa/pcingest:latest'
+  env:
+  - 'COMMIT_SHA=$COMMIT_SHA'
+  - 'REPO_NAME=$REPO_NAME'
